@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApartmentMngSystem.Core.Entities
 {
@@ -9,9 +11,11 @@ namespace ApartmentMngSystem.Core.Entities
         public int Floor { get; set; }
         public string Type { get; set; } = null!;
         public Status Status { get; set; } = Status.EMPTY;
-        public string? UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public int? UserId { get; set; }
         [ValidateNever]
-        public User User { get; set; }
+        public User? User { get; set; }
         [ValidateNever]
         public ICollection<ApartmentCost> ApartmentCosts { get; set; }
 

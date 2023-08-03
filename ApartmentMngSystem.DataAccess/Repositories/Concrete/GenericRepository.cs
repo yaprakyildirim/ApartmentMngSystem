@@ -5,18 +5,19 @@ using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 
 namespace ApartmentMngSystem.DataAccess.Repositories.Concrete
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class, new()
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly AppDbContext _context;
+        protected readonly AppDbContext _context;
+        protected readonly DbSet<T> _dbSet;
 
         public GenericRepository(AppDbContext context)
         {
             _context = context;
+            _dbSet = context.Set<T>();
         }
-
-        public async Task<int> CommitAsync()
+        public async Task AddAsync(T entity)
         {
-            return await _context.SaveChangesAsync();
+            await _dbSet.AddAsync(entity);
         }
 
         public async Task<T?> CreateAsync(T entity)
@@ -26,9 +27,9 @@ namespace ApartmentMngSystem.DataAccess.Repositories.Concrete
             return entity;
         }
 
-        public async Task<List<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            return await _context.Set<T>().AsNoTracking().ToListAsync();
+            return await _dbSet.AsNoTracking().AsQueryable().ToListAsync();
         }
 
         public async Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
@@ -36,25 +37,19 @@ namespace ApartmentMngSystem.DataAccess.Repositories.Concrete
             return await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(filter);
         }
 
-        public async Task<T?> GetByIdAsync(object id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
-        }
-        public async Task Remove(T entity)
-        {
-            _context.Set<T>().Remove(entity);
-            await _context.SaveChangesAsync();
+            return await _dbSet.FindAsync(id);
         }
 
-        public async Task<int> SaveChangesAsync()
+        public void Remove(T entity)
         {
-            return await _context.SaveChangesAsync();
+            _dbSet.Remove(entity);
         }
 
-        public async Task UpdateAsync(T entity)
+        public void Update(T entity)
         {
-            _context.Set<T>().Update(entity);
-            await _context.SaveChangesAsync();
+            _dbSet.Update(entity);
         }
     }
 }

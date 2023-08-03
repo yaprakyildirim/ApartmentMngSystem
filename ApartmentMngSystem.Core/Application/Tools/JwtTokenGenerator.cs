@@ -20,7 +20,7 @@ namespace ApartmentMngSystem.Business.Tools
             if (!string.IsNullOrWhiteSpace(dto.UserName))
                 claims.Add(new Claim("UserName", dto.UserName));
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.Key));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.JwtKey));
 
             var signinCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

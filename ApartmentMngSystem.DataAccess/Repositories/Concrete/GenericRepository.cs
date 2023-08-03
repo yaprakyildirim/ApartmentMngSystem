@@ -1,15 +1,15 @@
-﻿using ApartmentMngSystem.Business.Repositories;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using ApartmentMngSystem.DataAccess;
+using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 
-namespace ApartmentMngSystem.Core.Repositories
+namespace ApartmentMngSystem.DataAccess.Repositories.Concrete
 {
-    public class Repository<T> : IRepository<T> where T : class, new()
+    public class GenericRepository<T> : IGenericRepository<T> where T : class, new()
     {
         private readonly AppDbContext _context;
 
-        public Repository(AppDbContext context)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
         }

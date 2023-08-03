@@ -1,17 +1,18 @@
-﻿using ApartmentMngSystem.Business.Repositories;
-using ApartmentMngSystem.Core.Application.CQRS.Queries;
+﻿using ApartmentMngSystem.Core.Application.CQRS.Queries;
 using ApartmentMngSystem.Core.Application.Dto;
 using ApartmentMngSystem.Core.Entities;
+using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using MediatR;
+using System.Reflection;
 
 namespace ApartmentMngSystem.Business.Application.CQRS.Handlers
 {
     public class CheckUserRequestHandler : IRequestHandler<CheckUserQueryRequest, CheckUserResponseDto>
     {
-        private readonly IRepository<User> userRepository;
-        private readonly IRepository<Role> roleRepository;
+        private readonly IGenericRepository<User> userRepository;
+        private readonly IGenericRepository<Role> roleRepository;
 
-        public CheckUserRequestHandler(IRepository<User> userRepository, IRepository<Role> roleRepository)
+        public CheckUserRequestHandler(IGenericRepository<User> userRepository, IGenericRepository<Role> roleRepository)
         {
             this.userRepository = userRepository;
             this.roleRepository = roleRepository;
@@ -20,8 +21,9 @@ namespace ApartmentMngSystem.Business.Application.CQRS.Handlers
         public async Task<CheckUserResponseDto> Handle(CheckUserQueryRequest request, CancellationToken cancellationToken)
         {
             var dto = new CheckUserResponseDto();
-
-            var user = await this.userRepository.GetByFilterAsync(x => x.UserName == request.Username && x.Password == request.Password);
+            
+            
+            var user = await this.userRepository.GetByFilterAsync(x => x.UserName == request.UserName && x.Password == request.Password);
 
             if (user == null)
             {

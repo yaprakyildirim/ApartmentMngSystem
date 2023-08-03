@@ -1,8 +1,8 @@
 ﻿using System.Linq.Expressions;
 
-namespace ApartmentMngSystem.Business.Repositories
+namespace ApartmentMngSystem.DataAccess.Repositories.Abstract
 {
-    public interface IRepository<T> where T : class, new()
+    public interface IGenericRepository<T> where T : class, new()
     {
         Task<List<T>> GetAllAsync();
         Task<T?> GetByIdAsync(object id);

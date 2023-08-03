@@ -1,18 +1,20 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.OpenApi.Models;
+using ApartmentMngSystem.Business.Application.CQRS.Handlers;
 using ApartmentMngSystem.Business.Tools;
-using ApartmentMngSystem.Business.Repositories;
-using ApartmentMngSystem.Core.Repositories;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
+using ApartmentMngSystem.Core.Entities;
 using ApartmentMngSystem.DataAccess;
+using ApartmentMngSystem.DataAccess.Repositories.Abstract;
+using ApartmentMngSystem.DataAccess.Repositories.Concrete;
+using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Reflection;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+JwtTokenDefaults.JwtKey = builder.Configuration["JwtConfig:Key"];  // JwtKey'yi doðru deðerle dolduruyoruz
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
@@ -22,19 +24,23 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidAudience = JwtTokenDefaults.ValidAudience,
         ValidIssuer = JwtTokenDefaults.ValidIssuer,
         ClockSkew = TimeSpan.Zero,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.Key)),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.JwtKey)),  // Burada JwtKey'yi kullanýyoruz
         ValidateIssuerSigningKey = true,
         ValidateLifetime = true,
     };
 });
+
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
+builder.Services.AddScoped<IGenericRepository<Role>, GenericRepository<Role>>();
+
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(RegisterUserCommandHandler).Assembly);
+
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
@@ -43,7 +49,6 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

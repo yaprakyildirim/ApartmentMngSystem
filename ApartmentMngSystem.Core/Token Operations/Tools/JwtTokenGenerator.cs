@@ -1,10 +1,9 @@
-﻿using ApartmentMngSystem.Core.Application.Dto;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace ApartmentMngSystem.Business.Tools
+namespace ApartmentMngSystem.Core.TokenOperations.Dto
 {
     public class JwtTokenGenerator
     {

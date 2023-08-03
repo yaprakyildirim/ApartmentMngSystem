@@ -4,7 +4,7 @@ namespace ApartmentMngSystem.Business.Services.Abstract
 {
     public interface IUserService
     {
-        Task<User> GetUserIncludeApartment(int userId);
+        Task<User> GetUserIncludeApartment(string userId);
         Task<IEnumerable<User>> GetAllNonResidentUsers();
     }
 }

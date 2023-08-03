@@ -1,4 +1,4 @@
-﻿namespace ApartmentMngSystem.Core.Application.Dto
+﻿namespace ApartmentMngSystem.Core.TokenOperations.Dto
 {
     public class TokenResponseDto
     {

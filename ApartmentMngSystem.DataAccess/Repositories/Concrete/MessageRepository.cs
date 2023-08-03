@@ -10,7 +10,7 @@ namespace ApartmentMngSystem.DataAccess.Repositories.Concrete
         {
         }
 
-        public async Task<IEnumerable<Message>> GetAllByUserIdAndIncludeUserAsync(int userId)
+        public async Task<IEnumerable<Message>> GetAllByUserIdAndIncludeUserAsync(string userId)
         {
             return await _dbSet.AsNoTracking().Include(x => x.User).Where(x => x.User.Id == userId).ToListAsync();
         }

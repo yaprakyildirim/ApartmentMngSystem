@@ -1,4 +1,4 @@
-﻿using ApartmentMngSystem.Core.Application.Dto;
+﻿using ApartmentMngSystem.Core.TokenOperations.Dto;
 using MediatR;
 
 namespace ApartmentMngSystem.Core.Application.CQRS.Queries

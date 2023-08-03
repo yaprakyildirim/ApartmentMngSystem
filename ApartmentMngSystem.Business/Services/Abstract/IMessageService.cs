@@ -6,7 +6,7 @@ namespace ApartmentMngSystem.Business.Services.Abstract
     {
         Task AddMessage(Message message);
         Task<IEnumerable<Message>> GetAllMessages();
-        Task<IEnumerable<Message>> GetAllMessagesByUser(int userId);
+        Task<IEnumerable<Message>> GetAllMessagesByUser(string userId);
         Task<Message?> GetById(int id);
         Task UpdateNewMessageStatus();
 

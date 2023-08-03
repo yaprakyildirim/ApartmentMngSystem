@@ -15,7 +15,7 @@ namespace ApartmentMngSystem.Business.Services.Concrete
             _userManager = userManager;
         }
 
-        public async Task<User> GetUserIncludeApartment(int userId)
+        public async Task<User> GetUserIncludeApartment(string userId)
         {
             var user = await _userManager.Users.Where(u => u.Id == userId).Include(u => u.Apartment).FirstOrDefaultAsync();
             return user;

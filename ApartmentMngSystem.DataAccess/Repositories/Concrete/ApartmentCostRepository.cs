@@ -15,7 +15,7 @@ namespace ApartmentMngSystem.DataAccess.Repositories.Concrete
             return await _dbSet.AsNoTracking().Where(a => a.IsPaid == isPaid).Include(a => a.Apartment).ToListAsync();
         }
 
-        public async Task<IEnumerable<ApartmentCost>> GetAllByUserId(int userId)
+        public async Task<IEnumerable<ApartmentCost>> GetAllByUserId(string userId)
         {
             return await _dbSet.AsNoTracking().Where(x => x.Apartment.User.Id == userId).Include(x => x.Apartment).ToListAsync();
         }

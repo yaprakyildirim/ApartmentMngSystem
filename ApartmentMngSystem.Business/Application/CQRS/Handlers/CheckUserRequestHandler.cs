@@ -1,11 +1,9 @@
 ﻿using ApartmentMngSystem.Core.Application.CQRS.Queries;
-using ApartmentMngSystem.Core.Application.Dto;
 using ApartmentMngSystem.Core.Entities;
 using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using MediatR;
-using System.Reflection;
 
-namespace ApartmentMngSystem.Business.Application.CQRS.Handlers
+namespace ApartmentMngSystem.Core.TokenOperations.Dto
 {
     public class CheckUserRequestHandler : IRequestHandler<CheckUserQueryRequest, CheckUserResponseDto>
     {

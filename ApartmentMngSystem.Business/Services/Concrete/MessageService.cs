@@ -57,7 +57,7 @@ namespace ApartmentMngSystem.Business.Services.Concrete
             return message;
         }
 
-        public async Task<IEnumerable<Message>> GetAllMessagesByUser(int userId)
+        public async Task<IEnumerable<Message>> GetAllMessagesByUser(string userId)
         {
             return await _repository.GetAllByUserIdAndIncludeUserAsync(userId);
         }

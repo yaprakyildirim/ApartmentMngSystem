@@ -1,6 +1,6 @@
 using ApartmentMngSystem.Business.Application.CQRS.Handlers;
-using ApartmentMngSystem.Business.Tools;
 using ApartmentMngSystem.Core.Entities;
+using ApartmentMngSystem.Core.TokenOperations.Dto;
 using ApartmentMngSystem.DataAccess;
 using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using ApartmentMngSystem.DataAccess.Repositories.Concrete;

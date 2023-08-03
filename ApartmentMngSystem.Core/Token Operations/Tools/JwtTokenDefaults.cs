@@ -1,4 +1,4 @@
-﻿namespace ApartmentMngSystem.Business.Tools
+﻿namespace ApartmentMngSystem.Core.TokenOperations.Dto
 {
     public class JwtTokenDefaults
     {

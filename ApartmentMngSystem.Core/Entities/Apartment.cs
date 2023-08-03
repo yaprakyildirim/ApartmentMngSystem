@@ -13,7 +13,7 @@ namespace ApartmentMngSystem.Core.Entities
         public Status Status { get; set; } = Status.EMPTY;
 
         [ForeignKey("UserId")]
-        public int? UserId { get; set; }
+        public string? UserId { get; set; }
         [ValidateNever]
         public User? User { get; set; }
         [ValidateNever]

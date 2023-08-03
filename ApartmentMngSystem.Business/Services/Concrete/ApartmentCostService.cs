@@ -36,7 +36,7 @@ namespace ApartmentMngSystem.Business.Services.Concrete
             return await _repository.GetAllByIsPaidIncludeApartmentAsync(isPaid);
         }
 
-        public async Task<IEnumerable<ApartmentCost>> GetAllApartmentCostsByUser(int userId)
+        public async Task<IEnumerable<ApartmentCost>> GetAllApartmentCostsByUser(string userId)
         {
             return await _repository.GetAllByUserId(userId);
         }

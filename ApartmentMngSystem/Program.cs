@@ -1,11 +1,17 @@
 using ApartmentMngSystem.Business.Application.CQRS.Handlers;
+using ApartmentMngSystem.Business.Services.Abstract;
+using ApartmentMngSystem.Business.Services.Concrete;
 using ApartmentMngSystem.Core.Entities;
 using ApartmentMngSystem.Core.TokenOperations.Dto;
 using ApartmentMngSystem.DataAccess;
 using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using ApartmentMngSystem.DataAccess.Repositories.Concrete;
+using ApartmentMngSystem.DataAccess.UnitOfWork;
+using Hangfire;
+using System;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -13,6 +19,16 @@ using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Hangfire
+builder.Services.AddSingleton(builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
+builder.Services.AddHangfire(x =>
+{
+    x.UseSqlServerStorage(builder.Configuration.GetConnectionString("Local"));  // DefaultConnection'dan Local'e deðiþtirildi.
+});
+builder.Services.AddHangfireServer();
+
 
 // Add services to the container.
 JwtTokenDefaults.JwtKey = builder.Configuration["JwtConfig:Key"];  // JwtKey'yi doðru deðerle dolduruyoruz
@@ -30,6 +46,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidateLifetime = true,
     };
 });
+
 
 
 // Add services to the container.
@@ -66,15 +83,39 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
-builder.Services.AddScoped<IGenericRepository<Role>, GenericRepository<Role>>();
 
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(RegisterUserCommandHandler).Assembly);
 
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Local"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Local"));  // DefaultConnection'dan Local'e deðiþtirildi.
 });
+
+// Identity
+// Identity
+builder.Services.AddIdentity<User, IdentityRole>(opt =>
+{
+    opt.User.RequireUniqueEmail = true;
+    opt.SignIn.RequireConfirmedEmail = false;
+    opt.SignIn.RequireConfirmedPhoneNumber = false;
+})
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
+
+// Services
+builder.Services.AddScoped<ISendMailService, SendMailService>();
+builder.Services.AddScoped<IApartmentCostService, ApartmentCostService>();
+builder.Services.AddScoped<IApartmentService, ApartmentService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<CreditCardClientService, CreditCardClientService>();
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+// Repositories
+builder.Services.AddScoped<IApartmentCostRepository, ApartmentCostRepository>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IApartmentRepository, ApartmentRepository>();
 
 var app = builder.Build();
 

@@ -16,7 +16,7 @@ namespace ApartmentMngSystem.DataAccess.DataSeed
                 NormalizedEmail = "ADMIN@GMAIL.COM",
                 EmailConfirmed = true,
                 FirstName = "Yaprak",
-                LastName = "Yıildirim",
+                LastName = "Yildirim",
                 IdentityNumber = "14975856297",
                 PhoneNumber = "5417894512",
                 PlateNumber = "34NV3128",
@@ -71,8 +71,7 @@ namespace ApartmentMngSystem.DataAccess.DataSeed
                 PlateNumber = "34CV78",
                 UserName = "user4",
                 NormalizedUserName = "USER4",
-                PasswordHash = ph.HashPassword(user, "test"),
-
+                PasswordHash = ph.HashPassword(user, "test")
             },
             new User
             {
@@ -87,8 +86,7 @@ namespace ApartmentMngSystem.DataAccess.DataSeed
                 PlateNumber = "34ZH45",
                 UserName = "user5",
                 NormalizedUserName = "USER5",
-                PasswordHash = ph.HashPassword(user, "test"),
-
+                PasswordHash = ph.HashPassword(user, "test")
             },
             new User
             {
@@ -103,8 +101,7 @@ namespace ApartmentMngSystem.DataAccess.DataSeed
                 PlateNumber = "34SHN58",
                 UserName = "user6",
                 NormalizedUserName = "USER6",
-                PasswordHash = ph.HashPassword(user, "test"),
-
+                PasswordHash = ph.HashPassword(user, "test")
             },
             new User
             {
@@ -119,7 +116,7 @@ namespace ApartmentMngSystem.DataAccess.DataSeed
                 PlateNumber = "34AY78",
                 UserName = "user7",
                 NormalizedUserName = "USER7",
-                PasswordHash = ph.HashPassword(user, "test"),
+                PasswordHash = ph.HashPassword(user, "test")
             });
         }
     }

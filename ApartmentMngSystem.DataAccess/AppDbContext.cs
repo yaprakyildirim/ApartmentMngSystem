@@ -1,8 +1,7 @@
-﻿using ApartmentMngSystem.Business.Configurations;
-using ApartmentMngSystem.Core.Entities;
+﻿using ApartmentMngSystem.Core.Entities;
+using ApartmentMngSystem.DataAccess.DataSeed;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace ApartmentMngSystem.DataAccess
 {
@@ -13,23 +12,19 @@ namespace ApartmentMngSystem.DataAccess
         }
 
         public DbSet<Apartment>? Apartments { get; set; }
-
         public DbSet<ApartmentCost>? ApartmentCosts { get; set; }
-
-        public DbSet<User>? Users { get; set; }
-        public DbSet<Role>? Roles { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            modelBuilder.Entity<User>()
-            .HasOne(u => u.Apartment)
-            .WithOne(a => a.User)
-            .HasForeignKey<Apartment>(a => a.UserId);
-
+            modelBuilder.ApplyConfiguration(new ApartmentSeed());
+            modelBuilder.ApplyConfiguration(new ApartmentCostSeed());
+            modelBuilder.ApplyConfiguration(new MessageSeed());
+            modelBuilder.ApplyConfiguration(new RoleSeed());
+            modelBuilder.ApplyConfiguration(new UserSeed());
+            modelBuilder.ApplyConfiguration(new IdentityUserRoleSeed());
         }
     }
 }

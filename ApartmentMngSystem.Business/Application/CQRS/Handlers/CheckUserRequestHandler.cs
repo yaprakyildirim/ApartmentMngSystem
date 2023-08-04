@@ -8,12 +8,10 @@ namespace ApartmentMngSystem.Core.TokenOperations.Dto
     public class CheckUserRequestHandler : IRequestHandler<CheckUserQueryRequest, CheckUserResponseDto>
     {
         private readonly IGenericRepository<User> userRepository;
-        private readonly IGenericRepository<Role> roleRepository;
 
-        public CheckUserRequestHandler(IGenericRepository<User> userRepository, IGenericRepository<Role> roleRepository)
+        public CheckUserRequestHandler(IGenericRepository<User> userRepository)
         {
             this.userRepository = userRepository;
-            this.roleRepository = roleRepository;
         }
 
         public async Task<CheckUserResponseDto> Handle(CheckUserQueryRequest request, CancellationToken cancellationToken)
@@ -21,7 +19,7 @@ namespace ApartmentMngSystem.Core.TokenOperations.Dto
             var dto = new CheckUserResponseDto();
             
             
-            var user = await this.userRepository.GetByFilterAsync(x => x.UserName == request.UserName && x.Password == request.Password);
+            var user = await this.userRepository.GetByFilterAsync(x => x.UserName == request.UserName);
 
             if (user == null)
             {
@@ -32,8 +30,6 @@ namespace ApartmentMngSystem.Core.TokenOperations.Dto
                 dto.UserName = user.UserName;
                 dto.Id = user.Id;
                 dto.IsExist = true;
-                var role = await this.roleRepository.GetByFilterAsync(x => x.Id == user.RoleId);
-                dto.Role = role?.Definition;
             }
             return dto;
         }

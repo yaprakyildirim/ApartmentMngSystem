@@ -1,6 +1,5 @@
 ﻿using ApartmentMngSystem.Core.Application.CQRS.Commands;
 using ApartmentMngSystem.Core.Entities;
-using ApartmentMngSystem.Core.Enum;
 using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using MediatR;
 
@@ -20,9 +19,8 @@ namespace ApartmentMngSystem.Business.Application.CQRS.Handlers
             
             await this.repository.CreateAsync(new User
             {
-                Password = request.Password,
                 UserName = request.UserName,
-                RoleId = (int)RoleType.Admin,
+
             });
             return Unit.Value;
         }

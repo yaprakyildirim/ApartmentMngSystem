@@ -2,12 +2,14 @@
 using ApartmentMngSystem.Core.Application.CQRS.Queries;
 using ApartmentMngSystem.Core.TokenOperations.Dto;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApartmentMngSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AuthController : ControllerBase
     {
         private readonly IMediator mediator;

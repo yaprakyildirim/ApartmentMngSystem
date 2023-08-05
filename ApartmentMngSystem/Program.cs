@@ -7,6 +7,7 @@ using ApartmentMngSystem.DataAccess;
 using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using ApartmentMngSystem.DataAccess.Repositories.Concrete;
 using ApartmentMngSystem.DataAccess.UnitOfWork;
+using ApartmentMngSystem.Middleware;
 using Hangfire;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -35,22 +36,25 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 });
 
 // Add services to the container.
-JwtTokenDefaults.JwtKey = builder.Configuration["JwtConfig:Key"];  // JwtKey'yi doðru deðerle dolduruyoruz
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
-{
-    opt.RequireHttpsMetadata = false;
-    opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+JwtTokenDefaults.JwtKey = builder.Configuration["JwtConfig:Key"];
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        ValidAudience = JwtTokenDefaults.ValidAudience,
-        ValidIssuer = JwtTokenDefaults.ValidIssuer,
-        ClockSkew = TimeSpan.Zero,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.JwtKey)),  // Burada JwtKey'yi kullanýyoruz
-        ValidateIssuerSigningKey = true,
-        ValidateLifetime = true,
-    };
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = JwtTokenDefaults.ValidIssuer,
+            ValidAudience = JwtTokenDefaults.ValidAudience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.JwtKey))
+        };
+    });
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
 });
-
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -120,18 +124,18 @@ app.MapHangfireDashboard("/hangfire");
 RecurringJob.AddOrUpdate<ISendMailService>("EmailJob", x => x.SendMail(), Cron.DayInterval(1));
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Apartment API V1"));
+    app.UseGlobalExceptionMiddleware(); // Geliþtirme ortamýnda burada çaðýr
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+    app.UseGlobalExceptionMiddleware(); // Üretim ve diðer ortamlar için burada çaðýr
 }
 
 app.UseHttpsRedirection();

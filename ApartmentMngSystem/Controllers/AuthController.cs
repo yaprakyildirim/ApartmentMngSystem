@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ApartmentMngSystem.Controllers
 {
     [Route("api/[controller]")]
+
     [ApiController]
     public class AuthController : ControllerBase
     {

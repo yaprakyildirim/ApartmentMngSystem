@@ -9,12 +9,13 @@ namespace ApartmentMngSystem.Core.TokenOperations.Dto
     {
         public static TokenResponseDto GenerateToken(CheckUserResponseDto dto)
         {
-            var claims = new List<Claim>();
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, dto.Id.ToString())
+            };
 
             if (!string.IsNullOrWhiteSpace(dto.Role))
                 claims.Add(new Claim(ClaimTypes.Role, dto.Role));
-
-            claims.Add(new Claim(ClaimTypes.NameIdentifier, dto.Id.ToString()));
 
             if (!string.IsNullOrWhiteSpace(dto.UserName))
                 claims.Add(new Claim("UserName", dto.UserName));

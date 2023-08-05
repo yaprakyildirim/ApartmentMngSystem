@@ -36,7 +36,6 @@ namespace ApartmentMngSystem.Business.Application.CQRS.Handlers
             }
             else
             {
-                // Hata işleme, örneğin:
                 throw new Exception(string.Join(", ", result.Errors.Select(x => x.Description)));
             }
         }

@@ -8,7 +8,6 @@ using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using ApartmentMngSystem.DataAccess.Repositories.Concrete;
 using ApartmentMngSystem.DataAccess.UnitOfWork;
 using Hangfire;
-using System;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -20,15 +19,20 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Hangfire
 builder.Services.AddSingleton(builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
 builder.Services.AddHangfire(x =>
 {
-    x.UseSqlServerStorage(builder.Configuration.GetConnectionString("Local"));  // DefaultConnection'dan Local'e deðiþtirildi.
+    x.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection"));
+
 });
 builder.Services.AddHangfireServer();
 
+//DbContext
+builder.Services.AddDbContext<AppDbContext>(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 // Add services to the container.
 JwtTokenDefaults.JwtKey = builder.Configuration["JwtConfig:Key"];  // JwtKey'yi doðru deðerle dolduruyoruz
@@ -48,13 +52,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 
 
-
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Apartment Management", Version = "v1" });
 
     // JWT Yetkilendirmesi için Swagger Konfigürasyonu
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -83,16 +86,8 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
-
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(RegisterUserCommandHandler).Assembly);
 
-
-builder.Services.AddDbContext<AppDbContext>(opt =>
-{
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Local"));  // DefaultConnection'dan Local'e deðiþtirildi.
-});
-
-// Identity
 // Identity
 builder.Services.AddIdentity<User, IdentityRole>(opt =>
 {
@@ -109,6 +104,7 @@ builder.Services.AddScoped<IApartmentCostService, ApartmentCostService>();
 builder.Services.AddScoped<IApartmentService, ApartmentService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+
 builder.Services.AddScoped<CreditCardClientService, CreditCardClientService>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -119,6 +115,17 @@ builder.Services.AddScoped<IApartmentRepository, ApartmentRepository>();
 
 var app = builder.Build();
 
+app.MapHangfireDashboard("/hangfire");
+
+RecurringJob.AddOrUpdate<ISendMailService>("EmailJob", x => x.SendMail(), Cron.DayInterval(1));
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -127,9 +134,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Apartment API V1"));
 }
 
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseHangfireDashboard();
 app.Run();

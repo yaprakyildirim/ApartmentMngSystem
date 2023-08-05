@@ -1,14 +1,17 @@
 ﻿using ApartmentMngSystem.Business.Services.Abstract;
 using ApartmentMngSystem.Core.Entities;
 using ApartmentMngSystem.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data;
 
 namespace ApartmentMngSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Produces("application/json")] // JSON formatında yanıt verileceğini belirtir.
+    [Produces("application/json")]
+    [Authorize(Roles = "Admin")]
     public class ApartmentController : ControllerBase
     {
         private readonly IApartmentService _apartmentService;
@@ -19,19 +22,20 @@ namespace ApartmentMngSystem.Controllers
             _apartmentService = apartmentService;
             _userService = userService;
         }
-
-        [HttpGet]
+        [ResponseCache(NoStore = true, Duration = 0)]
+        [HttpGet("[action]")]
         public async Task<ActionResult<IEnumerable<Apartment>>> Index()
         {
             var apartmentList = await _apartmentService.GetAll();
             return Ok(apartmentList);
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([FromBody] Apartment apartment)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState); // Model doğrulama hatası durumunda BadRequest döner.
+                return BadRequest(ModelState);
 
             await _apartmentService.AddApartment(apartment);
             return CreatedAtAction(nameof(Index), new { id = apartment.Id }, apartment);
@@ -59,6 +63,7 @@ namespace ApartmentMngSystem.Controllers
         }
 
         [HttpPut("{id}")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [FromBody] UserApartmentViewModel userApartmentViewModel)
         {
             if (!ModelState.IsValid)
@@ -69,6 +74,7 @@ namespace ApartmentMngSystem.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
             var apartment = await _apartmentService.GetById(id);

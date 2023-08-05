@@ -236,10 +236,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                 columns: new[] { "Id", "ApartmentNumber", "BlockNumber", "CreatedTime", "Floor", "Status", "Type", "UpdatedTime", "UserId" },
                 values: new object[,]
                 {
-                    { 8, 8, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9173), 4, 0, "1+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9174), null },
-                    { 9, 10, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9176), 4, 0, "3+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9176), null },
-                    { 10, 10, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9177), 6, 0, "4+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9178), null },
-                    { 11, 12, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9179), 6, 0, "3+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9179), null }
+                    { 8, 8, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1632), 4, 0, "1+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1632), null },
+                    { 9, 10, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1633), 4, 0, "3+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1634), null },
+                    { 10, 10, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1635), 6, 0, "4+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1635), null },
+                    { 11, 12, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1636), 6, 0, "3+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1637), null }
                 });
 
             migrationBuilder.InsertData(
@@ -256,13 +256,13 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "FirstName", "IdentityNumber", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "PlateNumber", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "02174cf0–9123xccfe-afbf-59f706d33cf6", 0, "88abaa66-01e2-4690-9166-a680c07b0ba0", "User", "busraozdemir@gmail.com", true, "Busra", "14798756332", "Ozdemir", false, null, "BUSRAOZDEMIR@GMAIL.COM", "USER5", "AQAAAAEAACcQAAAAEKReK8rVoTEFa2mvf0hpYkTXdYgRc8Mjj27BC9eyP5NBlmmZ/HlSXUEPfkuhAjRatQ==", "5417894125", false, "34ZH45", "9c2244a8-3c80-4fed-9d69-f196232e0c0a", false, "user5" },
-                    { "02174cf0–9412–4cfe-afbf-53422d33cf6", 0, "6eab375b-5df9-4270-bb7a-579f7b589d97", "User", "cemgunveren@hotmail.com", true, "Cem", "35898714563", "Gunveren", false, null, "CEMGUNVEREN@HOTMAIL.COM", "USER2", "AQAAAAEAACcQAAAAEOTO+/fnBPR8N/MTnlTQG/2o6M0+j/aSXNHzjPgfexwEs4099QReYLXX6LsaDhs3tw==", "5300708998", false, "34FV07", "847bd3fc-8794-4f98-86e0-4b076a1a4c8d", false, "user2" },
-                    { "02174cf0–9412–4cfe-afbf-591231sd6d33cf6", 0, "101aac64-9a26-4f0d-85e1-290306002db5", "User", "furkankucukali@outlook.com", true, "Furkan", "17898774123", "Kucukali", false, null, "FURKANKUCUKALI@OUTLOOK.COM", "USER4", "AQAAAAEAACcQAAAAEFJQm1Ohf4n/1pniBRuUn2W1jSdKnHFbl9Dzv+F4v7GIagrJZP7DWBHAUmG+HmUZIw==", "5329665632", false, "34CV78", "c9ccb3d1-e907-4287-9b27-e54fdd34e88c", false, "user4" },
-                    { "02174cf0–9412–4cfe-afbf-59f706d72cf6", 0, "7a63cf79-186a-44b9-be6d-eb544318fbf6", "User", "admin@gmail.com", true, "Yaprak", "14975856297", "Yildirim", false, null, "ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEGV9mdLAAMgzSBbkNbYpg4ZGqrw8IFUUuJ0IBGXkELsIse1+5l2IA3g9gx21ZGkHaQ==", "5417894512", false, "34NV3128", "4fa506c2-7411-43c3-bf5f-33af97b0cca2", false, "admin" },
-                    { "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6", 0, "255c8619-8024-4cfb-a712-be14c6dcebc8", "User", "yusuf@gmail.com", true, "Yusuf", "15178945632", "Aslan", false, null, "YUSUF@GMAIL.COM", "USER3", "AQAAAAEAACcQAAAAEH0vk9qpK0x0SNRvwHev/KYX5j6KiReRoSmDBoKUP+lY7AmYP993RORrNcus03rbrQ==", "5329638956", false, "34BFF44", "7af96a38-aa3a-450a-9641-5c20935c7474", false, "user3" },
-                    { "02174cf0–9cvbcds2-afbf-59f706d33cf6", 0, "22fd7945-4b82-4401-8c00-721326114f24", "User", "ayselshn@gmail.com", true, "Aysel", "452256565623", "Sahin", false, null, "AYSELSHN@GMAIL.COM", "USER6", "AQAAAAEAACcQAAAAEMX4MNONvP/6lySHCHacMARMKcY0UNaWoL9TAzjbt46RfSPTYY2dSR1HvXiyIT5hEg==", "5453500023", false, "34SHN58", "0891b968-fad0-4558-9573-5b014e6cd9e8", false, "user6" },
-                    { "02174cf0–xcvds2e-afbf-59f706d33cf6", 0, "bae156ee-344c-4d7a-906e-2b0d73e3fd7a", "User", "altun58@gmail.com", true, "Altun", "14978889789", "Yıldıran", false, null, "ALTUN58@GMAIL.COM", "USER7", "AQAAAAEAACcQAAAAEAh+Ur/bR1H6yl28HdLgkS3oVgwi6hykbzchf82W717noLq0McJWanNAG3gvk8XdAw==", "5354869874", false, "34AY78", "a75df7c2-168a-482a-ad77-f4a793a56085", false, "user7" }
+                    { "02174cf0–9123xccfe-afbf-59f706d33cf6", 0, "bbd4e797-34fa-4286-869e-53959eff304c", "User", "busraozdemir@gmail.com", true, "Busra", "14798756332", "Ozdemir", false, null, "BUSRAOZDEMIR@GMAIL.COM", "USER5", "AQAAAAEAACcQAAAAEF3mhbqxEPA9VAxId9JvHnB0vz4llHWrwNUjGKnTnFMPtKGNivFw+gyBesffjj9hjQ==", "5417894125", false, "34ZH45", "97a12417-4f70-48ca-ba15-605d9820e320", false, "user5" },
+                    { "02174cf0–9412–4cfe-afbf-53422d33cf6", 0, "071163fd-f3d0-4ca5-bf96-0a76f2b8e024", "User", "cemgunveren@hotmail.com", true, "Cem", "35898714563", "Gunveren", false, null, "CEMGUNVEREN@HOTMAIL.COM", "USER2", "AQAAAAEAACcQAAAAELxDLHHo2bMOJiIOaTioKsaIiCwHzJXwaBsD9UZTRS3iKx9UtMMqn+CVnWTXRRr2og==", "5300708998", false, "34FV07", "2d2e9b32-5508-46fc-afed-ef4bcbbef427", false, "user2" },
+                    { "02174cf0–9412–4cfe-afbf-591231sd6d33cf6", 0, "2ca5f407-6d69-48de-a63e-fa9fcf1d0a79", "User", "furkankucukali@outlook.com", true, "Furkan", "17898774123", "Kucukali", false, null, "FURKANKUCUKALI@OUTLOOK.COM", "USER4", "AQAAAAEAACcQAAAAENz/a6dLSGhNhcTbHwwryDj3VmXhcLyQhqXlYujk2quCXBMFuzKDqA99AsShey+Ldg==", "5329665632", false, "34CV78", "204ffe21-de0f-44a8-8344-af80ebc1364d", false, "user4" },
+                    { "02174cf0–9412–4cfe-afbf-59f706d72cf6", 0, "c120ada6-c7ba-47f2-8422-1bde91434794", "User", "admin@gmail.com", true, "Yaprak", "14975856297", "Yildirim", false, null, "ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEI3+XRhMDNZXHjkjeOFOFIvHWsuT5P3YutH2TkVDuUjen2kb3Eq5vn0yU15sOeKySQ==", "5417894512", false, "34NV3128", "28b6a138-b650-454e-be8c-572d3780b7d5", false, "admin" },
+                    { "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6", 0, "17bb7676-e7cf-48e4-81bb-4f605f0982be", "User", "yusuf@gmail.com", true, "Yusuf", "15178945632", "Aslan", false, null, "YUSUF@GMAIL.COM", "USER3", "AQAAAAEAACcQAAAAEGjqAGaBNXp6fz/JYUBxRPegS9N+plrFGP5w4GVBDrnEmozllKyCLeJR5AkKlrXRqA==", "5329638956", false, "34BFF44", "c7c9e784-bcbf-4b83-b410-7c03a09d138f", false, "user3" },
+                    { "02174cf0–9cvbcds2-afbf-59f706d33cf6", 0, "5e7fb33b-c0af-433c-8fe4-e2271409946d", "User", "ayselshn@gmail.com", true, "Aysel", "452256565623", "Sahin", false, null, "AYSELSHN@GMAIL.COM", "USER6", "AQAAAAEAACcQAAAAEIAl38yji2wzakcvTOUqVYAYXCQ0XueO79HU4dt1QUlQFEKXkgM+Quhu3G9PIWf6hA==", "5453500023", false, "34SHN58", "9397cb0b-8f9e-4c9b-b7e7-6442140b478e", false, "user6" },
+                    { "02174cf0–xcvds2e-afbf-59f706d33cf6", 0, "242f99b0-b8ce-47ce-9e85-f24175b5670b", "User", "altun58@gmail.com", true, "Altun", "14978889789", "Yıldıran", false, null, "ALTUN58@GMAIL.COM", "USER7", "AQAAAAEAACcQAAAAEL4Bawm47oeI1DH3cLPdySdeXwMj9p+tU/6vOCuTDKFs7DnRKt8Qn1gNnPDSNORb+w==", "5354869874", false, "34AY78", "7f66faf6-2bf1-4aa2-912d-d1c1a05bfe22", false, "user7" }
                 });
 
             migrationBuilder.InsertData(
@@ -270,13 +270,13 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                 columns: new[] { "Id", "ApartmentNumber", "BlockNumber", "CreatedTime", "Floor", "Status", "Type", "UpdatedTime", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, 4, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9152), 2, 1, "3+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9160), "02174cf0–9412–4cfe-afbf-53422d33cf6" },
-                    { 2, 3, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9164), 7, 1, "2+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9164), "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6" },
-                    { 3, 3, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9166), 7, 1, "2+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9166), "02174cf0–9412–4cfe-afbf-591231sd6d33cf6" },
-                    { 4, 5, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9167), 3, 1, "3+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9168), "02174cf0–9123xccfe-afbf-59f706d33cf6" },
-                    { 5, 5, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9169), 3, 1, "3+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9169), "02174cf0–9cvbcds2-afbf-59f706d33cf6" },
-                    { 6, 7, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9170), 3, 0, "4+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9171), "02174cf0–xcvds2e-afbf-59f706d33cf6" },
-                    { 7, 7, 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9172), 4, 0, "2+1", new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9172), "02174cf0–9412–4cfe-afbf-59f706d72cf6" }
+                    { 1, 1, 4, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1608), 2, 1, "3+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1618), "02174cf0–9412–4cfe-afbf-53422d33cf6" },
+                    { 2, 3, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1623), 7, 1, "2+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1623), "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6" },
+                    { 3, 3, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1625), 7, 1, "2+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1625), "02174cf0–9412–4cfe-afbf-591231sd6d33cf6" },
+                    { 4, 5, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1626), 3, 1, "3+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1627), "02174cf0–9123xccfe-afbf-59f706d33cf6" },
+                    { 5, 5, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1628), 3, 1, "3+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1628), "02174cf0–9cvbcds2-afbf-59f706d33cf6" },
+                    { 6, 7, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1629), 3, 0, "4+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1630), "02174cf0–xcvds2e-afbf-59f706d33cf6" },
+                    { 7, 7, 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1631), 4, 0, "2+1", new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1631), "02174cf0–9412–4cfe-afbf-59f706d72cf6" }
                 });
 
             migrationBuilder.InsertData(
@@ -298,14 +298,14 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                 columns: new[] { "Id", "CreatedTime", "Description", "Status", "UpdatedTime", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9501), "Faturalar ödendi.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9501), "02174cf0–9412–4cfe-afbf-53422d33cf6" },
-                    { 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9503), "Apartman temizlenmemişti.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9504), "02174cf0–9412–4cfe-afbf-53422d33cf6" },
-                    { 3, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9505), "Asansör bozuk, neden ödeme yapıyoruz.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9505), "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6" },
-                    { 4, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9506), "Faturalar ödendi.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9507), "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6" },
-                    { 5, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9508), "Güvenlik uyuyor.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9508), "02174cf0–9412–4cfe-afbf-591231sd6d33cf6" },
-                    { 6, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9509), "Araçlar özensiz parkediyor, uyarı geçermisiniz? Teşekkürler", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9509), "02174cf0–9412–4cfe-afbf-591231sd6d33cf6" },
-                    { 7, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9510), "Pencerelerden halı, örtü silkelenmesin lütfen. Üst kat uyarılarıma rağmen devam ediyor.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9511), "02174cf0–9123xccfe-afbf-59f706d33cf6" },
-                    { 8, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9511), "Aidatı ödendi.", 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9512), "02174cf0–xcvds2e-afbf-59f706d33cf6" }
+                    { 1, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2011), "Faturalar ödendi.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2011), "02174cf0–9412–4cfe-afbf-53422d33cf6" },
+                    { 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2014), "Apartman temizlenmemişti.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2015), "02174cf0–9412–4cfe-afbf-53422d33cf6" },
+                    { 3, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2016), "Asansör bozuk, neden ödeme yapıyoruz.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2016), "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6" },
+                    { 4, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2017), "Faturalar ödendi.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2017), "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6" },
+                    { 5, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2018), "Güvenlik uyuyor.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2018), "02174cf0–9412–4cfe-afbf-591231sd6d33cf6" },
+                    { 6, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2019), "Araçlar özensiz parkediyor, uyarı geçermisiniz? Teşekkürler", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2020), "02174cf0–9412–4cfe-afbf-591231sd6d33cf6" },
+                    { 7, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2021), "Pencerelerden halı, örtü silkelenmesin lütfen. Üst kat uyarılarıma rağmen devam ediyor.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2021), "02174cf0–9123xccfe-afbf-59f706d33cf6" },
+                    { 8, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2022), "Aidatı ödendi.", 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2022), "02174cf0–xcvds2e-afbf-59f706d33cf6" }
                 });
 
             migrationBuilder.InsertData(
@@ -313,19 +313,19 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                 columns: new[] { "Id", "Amount", "ApartmentId", "CostType", "CreatedTime", "IsPaid", "Month", "UpdatedTime" },
                 values: new object[,]
                 {
-                    { 1, 180, 1, 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9392), false, 12, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9392) },
-                    { 2, 240, 1, 1, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9395), false, 12, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9395) },
-                    { 3, 850, 1, 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9397), false, 12, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9397) },
-                    { 4, 352, 2, 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9398), false, 9, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9398) },
-                    { 5, 550, 2, 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9429), false, 10, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9430) },
-                    { 6, 690, 2, 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9431), true, 9, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9431) },
-                    { 7, 880, 3, 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9432), true, 9, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9433) },
-                    { 8, 490, 3, 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9434), true, 9, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9434) },
-                    { 9, 247, 4, 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9435), true, 10, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9436) },
-                    { 10, 80, 4, 1, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9436), true, 10, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9437) },
-                    { 11, 89, 1, 1, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9438), true, 12, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9438) },
-                    { 12, 567, 1, 2, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9439), true, 12, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9440) },
-                    { 13, 135, 1, 0, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9441), true, 9, new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9441) }
+                    { 1, 180, 1, 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1813), false, 12, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1814) },
+                    { 2, 240, 1, 1, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1817), false, 12, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1817) },
+                    { 3, 850, 1, 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1819), false, 12, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1819) },
+                    { 4, 352, 2, 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1820), false, 9, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1821) },
+                    { 5, 550, 2, 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1821), false, 10, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1822) },
+                    { 6, 690, 2, 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1823), true, 9, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1823) },
+                    { 7, 880, 3, 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1824), true, 9, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1825) },
+                    { 8, 490, 3, 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1827), true, 9, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1827) },
+                    { 9, 247, 4, 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1828), true, 10, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1829) },
+                    { 10, 80, 4, 1, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1830), true, 10, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1830) },
+                    { 11, 89, 1, 1, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1831), true, 12, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1831) },
+                    { 12, 567, 1, 2, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1832), true, 12, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1833) },
+                    { 13, 135, 1, 0, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1834), true, 9, new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1834) }
                 });
 
             migrationBuilder.CreateIndex(

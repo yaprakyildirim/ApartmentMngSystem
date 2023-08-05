@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentMngSystem", "ApartmentMngSystem\ApartmentMngSystem.csproj", "{7D14D83B-787A-419D-92CD-B8644AA5890E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentMngSystem", "ApartmentMngSystem\ApartmentMngSystem.csproj", "{7D14D83B-787A-419D-92CD-B8644AA5890E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentMngSystem.Business", "ApartmentMngSystem.Business\ApartmentMngSystem.Business.csproj", "{BB207885-B143-4E04-A2E4-2E83070BDFF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentMngSystem.Business", "ApartmentMngSystem.Business\ApartmentMngSystem.Business.csproj", "{BB207885-B143-4E04-A2E4-2E83070BDFF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentMngSystem.DataAccess", "ApartmentMngSystem.DataAccess\ApartmentMngSystem.DataAccess.csproj", "{0C75E96D-9DEC-4AAC-BB85-F14ED50329BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentMngSystem.DataAccess", "ApartmentMngSystem.DataAccess\ApartmentMngSystem.DataAccess.csproj", "{0C75E96D-9DEC-4AAC-BB85-F14ED50329BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentMngSystem.Core", "ApartmentMngSystem.Core\ApartmentMngSystem.Core.csproj", "{6EA042CA-EAA4-405C-B6AF-E9E961B16C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentMngSystem.Core", "ApartmentMngSystem.Core\ApartmentMngSystem.Core.csproj", "{6EA042CA-EAA4-405C-B6AF-E9E961B16C56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

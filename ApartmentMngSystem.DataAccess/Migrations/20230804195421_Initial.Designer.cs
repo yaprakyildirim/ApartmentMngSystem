@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApartmentMngSystem.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230804141749_Initial")]
+    [Migration("20230804195421_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,11 +71,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 1,
                             ApartmentNumber = 1,
                             BlockNumber = 4,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9152),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1608),
                             Floor = 2,
                             Status = 1,
                             Type = "3+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9160),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1618),
                             UserId = "02174cf0–9412–4cfe-afbf-53422d33cf6"
                         },
                         new
@@ -83,11 +83,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 2,
                             ApartmentNumber = 3,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9164),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1623),
                             Floor = 7,
                             Status = 1,
                             Type = "2+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9164),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1623),
                             UserId = "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6"
                         },
                         new
@@ -95,11 +95,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 3,
                             ApartmentNumber = 3,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9166),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1625),
                             Floor = 7,
                             Status = 1,
                             Type = "2+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9166),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1625),
                             UserId = "02174cf0–9412–4cfe-afbf-591231sd6d33cf6"
                         },
                         new
@@ -107,11 +107,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 4,
                             ApartmentNumber = 5,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9167),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1626),
                             Floor = 3,
                             Status = 1,
                             Type = "3+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9168),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1627),
                             UserId = "02174cf0–9123xccfe-afbf-59f706d33cf6"
                         },
                         new
@@ -119,11 +119,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 5,
                             ApartmentNumber = 5,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9169),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1628),
                             Floor = 3,
                             Status = 1,
                             Type = "3+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9169),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1628),
                             UserId = "02174cf0–9cvbcds2-afbf-59f706d33cf6"
                         },
                         new
@@ -131,11 +131,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 6,
                             ApartmentNumber = 7,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9170),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1629),
                             Floor = 3,
                             Status = 0,
                             Type = "4+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9171),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1630),
                             UserId = "02174cf0–xcvds2e-afbf-59f706d33cf6"
                         },
                         new
@@ -143,11 +143,11 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 7,
                             ApartmentNumber = 7,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9172),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1631),
                             Floor = 4,
                             Status = 0,
                             Type = "2+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9172),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1631),
                             UserId = "02174cf0–9412–4cfe-afbf-59f706d72cf6"
                         },
                         new
@@ -155,44 +155,44 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Id = 8,
                             ApartmentNumber = 8,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9173),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1632),
                             Floor = 4,
                             Status = 0,
                             Type = "1+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9174)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1632)
                         },
                         new
                         {
                             Id = 9,
                             ApartmentNumber = 10,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9176),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1633),
                             Floor = 4,
                             Status = 0,
                             Type = "3+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9176)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1634)
                         },
                         new
                         {
                             Id = 10,
                             ApartmentNumber = 10,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9177),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1635),
                             Floor = 6,
                             Status = 0,
                             Type = "4+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9178)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1635)
                         },
                         new
                         {
                             Id = 11,
                             ApartmentNumber = 12,
                             BlockNumber = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9179),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1636),
                             Floor = 6,
                             Status = 0,
                             Type = "3+1",
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9179)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1637)
                         });
                 });
 
@@ -238,10 +238,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 180,
                             ApartmentId = 1,
                             CostType = 0,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9392),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1813),
                             IsPaid = false,
                             Month = 12,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9392)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1814)
                         },
                         new
                         {
@@ -249,10 +249,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 240,
                             ApartmentId = 1,
                             CostType = 1,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9395),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1817),
                             IsPaid = false,
                             Month = 12,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9395)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1817)
                         },
                         new
                         {
@@ -260,10 +260,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 850,
                             ApartmentId = 1,
                             CostType = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9397),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1819),
                             IsPaid = false,
                             Month = 12,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9397)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1819)
                         },
                         new
                         {
@@ -271,10 +271,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 352,
                             ApartmentId = 2,
                             CostType = 0,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9398),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1820),
                             IsPaid = false,
                             Month = 9,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9398)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1821)
                         },
                         new
                         {
@@ -282,10 +282,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 550,
                             ApartmentId = 2,
                             CostType = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9429),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1821),
                             IsPaid = false,
                             Month = 10,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9430)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1822)
                         },
                         new
                         {
@@ -293,10 +293,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 690,
                             ApartmentId = 2,
                             CostType = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9431),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1823),
                             IsPaid = true,
                             Month = 9,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9431)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1823)
                         },
                         new
                         {
@@ -304,10 +304,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 880,
                             ApartmentId = 3,
                             CostType = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9432),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1824),
                             IsPaid = true,
                             Month = 9,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9433)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1825)
                         },
                         new
                         {
@@ -315,10 +315,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 490,
                             ApartmentId = 3,
                             CostType = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9434),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1827),
                             IsPaid = true,
                             Month = 9,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9434)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1827)
                         },
                         new
                         {
@@ -326,10 +326,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 247,
                             ApartmentId = 4,
                             CostType = 0,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9435),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1828),
                             IsPaid = true,
                             Month = 10,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9436)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1829)
                         },
                         new
                         {
@@ -337,10 +337,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 80,
                             ApartmentId = 4,
                             CostType = 1,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9436),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1830),
                             IsPaid = true,
                             Month = 10,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9437)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1830)
                         },
                         new
                         {
@@ -348,10 +348,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 89,
                             ApartmentId = 1,
                             CostType = 1,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9438),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1831),
                             IsPaid = true,
                             Month = 12,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9438)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1831)
                         },
                         new
                         {
@@ -359,10 +359,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 567,
                             ApartmentId = 1,
                             CostType = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9439),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1832),
                             IsPaid = true,
                             Month = 12,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9440)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1833)
                         },
                         new
                         {
@@ -370,10 +370,10 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                             Amount = 135,
                             ApartmentId = 1,
                             CostType = 0,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9441),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1834),
                             IsPaid = true,
                             Month = 9,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9441)
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(1834)
                         });
                 });
 
@@ -410,73 +410,73 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9501),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2011),
                             Description = "Faturalar ödendi.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9501),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2011),
                             UserId = "02174cf0–9412–4cfe-afbf-53422d33cf6"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9503),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2014),
                             Description = "Apartman temizlenmemişti.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9504),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2015),
                             UserId = "02174cf0–9412–4cfe-afbf-53422d33cf6"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9505),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2016),
                             Description = "Asansör bozuk, neden ödeme yapıyoruz.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9505),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2016),
                             UserId = "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9506),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2017),
                             Description = "Faturalar ödendi.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9507),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2017),
                             UserId = "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9508),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2018),
                             Description = "Güvenlik uyuyor.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9508),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2018),
                             UserId = "02174cf0–9412–4cfe-afbf-591231sd6d33cf6"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9509),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2019),
                             Description = "Araçlar özensiz parkediyor, uyarı geçermisiniz? Teşekkürler",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9509),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2020),
                             UserId = "02174cf0–9412–4cfe-afbf-591231sd6d33cf6"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9510),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2021),
                             Description = "Pencerelerden halı, örtü silkelenmesin lütfen. Üst kat uyarılarıma rağmen devam ediyor.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9511),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2021),
                             UserId = "02174cf0–9123xccfe-afbf-59f706d33cf6"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9511),
+                            CreatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2022),
                             Description = "Aidatı ödendi.",
                             Status = 0,
-                            UpdatedTime = new DateTime(2023, 8, 4, 17, 17, 49, 216, DateTimeKind.Local).AddTicks(9512),
+                            UpdatedTime = new DateTime(2023, 8, 4, 22, 54, 21, 110, DateTimeKind.Local).AddTicks(2022),
                             UserId = "02174cf0–xcvds2e-afbf-59f706d33cf6"
                         });
                 });
@@ -764,16 +764,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–9412–4cfe-afbf-59f706d72cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7a63cf79-186a-44b9-be6d-eb544318fbf6",
+                            ConcurrencyStamp = "c120ada6-c7ba-47f2-8422-1bde91434794",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGV9mdLAAMgzSBbkNbYpg4ZGqrw8IFUUuJ0IBGXkELsIse1+5l2IA3g9gx21ZGkHaQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEI3+XRhMDNZXHjkjeOFOFIvHWsuT5P3YutH2TkVDuUjen2kb3Eq5vn0yU15sOeKySQ==",
                             PhoneNumber = "5417894512",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4fa506c2-7411-43c3-bf5f-33af97b0cca2",
+                            SecurityStamp = "28b6a138-b650-454e-be8c-572d3780b7d5",
                             TwoFactorEnabled = false,
                             UserName = "admin",
                             FirstName = "Yaprak",
@@ -785,16 +785,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–9412–4cfe-afbf-53422d33cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6eab375b-5df9-4270-bb7a-579f7b589d97",
+                            ConcurrencyStamp = "071163fd-f3d0-4ca5-bf96-0a76f2b8e024",
                             Email = "cemgunveren@hotmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "CEMGUNVEREN@HOTMAIL.COM",
                             NormalizedUserName = "USER2",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOTO+/fnBPR8N/MTnlTQG/2o6M0+j/aSXNHzjPgfexwEs4099QReYLXX6LsaDhs3tw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELxDLHHo2bMOJiIOaTioKsaIiCwHzJXwaBsD9UZTRS3iKx9UtMMqn+CVnWTXRRr2og==",
                             PhoneNumber = "5300708998",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "847bd3fc-8794-4f98-86e0-4b076a1a4c8d",
+                            SecurityStamp = "2d2e9b32-5508-46fc-afed-ef4bcbbef427",
                             TwoFactorEnabled = false,
                             UserName = "user2",
                             FirstName = "Cem",
@@ -806,16 +806,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–9412–4cfe-afbf-5fhdf6d33cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "255c8619-8024-4cfb-a712-be14c6dcebc8",
+                            ConcurrencyStamp = "17bb7676-e7cf-48e4-81bb-4f605f0982be",
                             Email = "yusuf@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "YUSUF@GMAIL.COM",
                             NormalizedUserName = "USER3",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH0vk9qpK0x0SNRvwHev/KYX5j6KiReRoSmDBoKUP+lY7AmYP993RORrNcus03rbrQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGjqAGaBNXp6fz/JYUBxRPegS9N+plrFGP5w4GVBDrnEmozllKyCLeJR5AkKlrXRqA==",
                             PhoneNumber = "5329638956",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7af96a38-aa3a-450a-9641-5c20935c7474",
+                            SecurityStamp = "c7c9e784-bcbf-4b83-b410-7c03a09d138f",
                             TwoFactorEnabled = false,
                             UserName = "user3",
                             FirstName = "Yusuf",
@@ -827,16 +827,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–9412–4cfe-afbf-591231sd6d33cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "101aac64-9a26-4f0d-85e1-290306002db5",
+                            ConcurrencyStamp = "2ca5f407-6d69-48de-a63e-fa9fcf1d0a79",
                             Email = "furkankucukali@outlook.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "FURKANKUCUKALI@OUTLOOK.COM",
                             NormalizedUserName = "USER4",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFJQm1Ohf4n/1pniBRuUn2W1jSdKnHFbl9Dzv+F4v7GIagrJZP7DWBHAUmG+HmUZIw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENz/a6dLSGhNhcTbHwwryDj3VmXhcLyQhqXlYujk2quCXBMFuzKDqA99AsShey+Ldg==",
                             PhoneNumber = "5329665632",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c9ccb3d1-e907-4287-9b27-e54fdd34e88c",
+                            SecurityStamp = "204ffe21-de0f-44a8-8344-af80ebc1364d",
                             TwoFactorEnabled = false,
                             UserName = "user4",
                             FirstName = "Furkan",
@@ -848,16 +848,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–9123xccfe-afbf-59f706d33cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "88abaa66-01e2-4690-9166-a680c07b0ba0",
+                            ConcurrencyStamp = "bbd4e797-34fa-4286-869e-53959eff304c",
                             Email = "busraozdemir@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "BUSRAOZDEMIR@GMAIL.COM",
                             NormalizedUserName = "USER5",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKReK8rVoTEFa2mvf0hpYkTXdYgRc8Mjj27BC9eyP5NBlmmZ/HlSXUEPfkuhAjRatQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEF3mhbqxEPA9VAxId9JvHnB0vz4llHWrwNUjGKnTnFMPtKGNivFw+gyBesffjj9hjQ==",
                             PhoneNumber = "5417894125",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9c2244a8-3c80-4fed-9d69-f196232e0c0a",
+                            SecurityStamp = "97a12417-4f70-48ca-ba15-605d9820e320",
                             TwoFactorEnabled = false,
                             UserName = "user5",
                             FirstName = "Busra",
@@ -869,16 +869,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–9cvbcds2-afbf-59f706d33cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "22fd7945-4b82-4401-8c00-721326114f24",
+                            ConcurrencyStamp = "5e7fb33b-c0af-433c-8fe4-e2271409946d",
                             Email = "ayselshn@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "AYSELSHN@GMAIL.COM",
                             NormalizedUserName = "USER6",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMX4MNONvP/6lySHCHacMARMKcY0UNaWoL9TAzjbt46RfSPTYY2dSR1HvXiyIT5hEg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIAl38yji2wzakcvTOUqVYAYXCQ0XueO79HU4dt1QUlQFEKXkgM+Quhu3G9PIWf6hA==",
                             PhoneNumber = "5453500023",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0891b968-fad0-4558-9573-5b014e6cd9e8",
+                            SecurityStamp = "9397cb0b-8f9e-4c9b-b7e7-6442140b478e",
                             TwoFactorEnabled = false,
                             UserName = "user6",
                             FirstName = "Aysel",
@@ -890,16 +890,16 @@ namespace ApartmentMngSystem.DataAccess.Migrations
                         {
                             Id = "02174cf0–xcvds2e-afbf-59f706d33cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bae156ee-344c-4d7a-906e-2b0d73e3fd7a",
+                            ConcurrencyStamp = "242f99b0-b8ce-47ce-9e85-f24175b5670b",
                             Email = "altun58@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ALTUN58@GMAIL.COM",
                             NormalizedUserName = "USER7",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAh+Ur/bR1H6yl28HdLgkS3oVgwi6hykbzchf82W717noLq0McJWanNAG3gvk8XdAw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL4Bawm47oeI1DH3cLPdySdeXwMj9p+tU/6vOCuTDKFs7DnRKt8Qn1gNnPDSNORb+w==",
                             PhoneNumber = "5354869874",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a75df7c2-168a-482a-ad77-f4a793a56085",
+                            SecurityStamp = "7f66faf6-2bf1-4aa2-912d-d1c1a05bfe22",
                             TwoFactorEnabled = false,
                             UserName = "user7",
                             FirstName = "Altun",

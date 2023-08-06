@@ -7,6 +7,7 @@ using ApartmentMngSystem.DataAccess;
 using ApartmentMngSystem.DataAccess.Repositories.Abstract;
 using ApartmentMngSystem.DataAccess.Repositories.Concrete;
 using ApartmentMngSystem.DataAccess.UnitOfWork;
+using ApartmentMngSystem.JobManager;
 using ApartmentMngSystem.Middleware;
 using Hangfire;
 using MediatR;
@@ -117,10 +118,13 @@ builder.Services.AddScoped<IApartmentCostRepository, ApartmentCostRepository>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddScoped<IApartmentRepository, ApartmentRepository>();
 
+// Hangfire recurring job configuration
+builder.Services.AddTransient<SendMailRecurringJob>();
+
+
 var app = builder.Build();
 
 app.MapHangfireDashboard("/hangfire");
-
 RecurringJob.AddOrUpdate<ISendMailService>("EmailJob", x => x.SendMail(), Cron.DayInterval(1));
 
 // Configure the HTTP request pipeline.

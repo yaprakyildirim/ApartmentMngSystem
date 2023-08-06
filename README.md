@@ -30,5 +30,5 @@ Bu proje, bir site yönetiminin ihtiyaçlarını karşılamak üzere tasarlanmı
 - [MailKit] - To send email to users periodically
 - [PasswordGenerator] - Standart password generator library
 
-#### Username: apartmentmanagementsystemtest@gmail.com
-#### Password": Apartment123
+### Username: apartmentmanagementsystemtest@gmail.com
+### Password": Apartment123
